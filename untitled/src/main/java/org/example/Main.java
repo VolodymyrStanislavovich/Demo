@@ -1,15 +1,28 @@
 package org.example;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        int a = 4;
-        int b = 5;
+        Scanner console = new Scanner(System.in);
+        System.out.println("Enter size: ");
 
 
-        int c = b + a;
+        int size = console.nextInt();
 
-        System.out.println(String.format("Answer is: ", c));
+        int[] myArray = new int[size];
 
+        for (int i = 0; i < myArray.length; i++) {
+            System.out.println("Enter value: ");
+            myArray[i] = console.nextInt();
+        }
+        for (int x : myArray) {
+            System.out.println(" [" + x + "] ");
+        }
+        System.out.println( );
 
+        System.out.println("Size is: " + size);
     }
 }
+
+
